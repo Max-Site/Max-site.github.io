@@ -21,7 +21,7 @@ gulp.task('JS',function() {
 gulp.task('browser-sync',function() {
   browserSync.init({
     server:{
-      baseDir:"index.html"
+      baseDir:"/~"
     }
   })
 })
