@@ -9,7 +9,7 @@ gulp.task('scss',function () {
     .pipe(browserSync.reload({stream:true}))
 })
 gulp.task('html',function() {
-  return gulp.src('app/*.html')
+  return gulp.src('*.html')
   .pipe(browserSync.reload({stream:true}))
 
 })
@@ -21,13 +21,13 @@ gulp.task('JS',function() {
 gulp.task('browser-sync',function() {
   browserSync.init({
     server:{
-      baseDir:"app/"
+      baseDir:"index.html"
     }
   })
 })
 gulp.task('watch', function() {
   gulp.watch('app/scss/**/*.scss',gulp.parallel('scss'))
-  gulp.watch('app/*.html',gulp.parallel('html'))
+  gulp.watch('*.html',gulp.parallel('html'))
   gulp.watch('app/js/*.js',gulp.parallel('JS'))
 
 })
